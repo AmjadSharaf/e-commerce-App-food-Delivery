@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/colors.dart';
 import 'package:food_app/widget/bigtext.dart';
+import 'package:food_app/widget/small_text.dart';
 
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({super.key});
@@ -43,14 +45,68 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            height: 140,
+            height: 120,
 
-            margin: EdgeInsets.only(left: 30, right: 30, bottom: 15),
+            margin: EdgeInsets.only(left: 30, right: 30, bottom: 30),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color: Colors.white,
             ),
-            child: Bigtext(text: "Food Food Food Food  "),
+            child: Container(
+              padding: EdgeInsets.only(top: 15, left: 15, right: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Bigtext(text: "chines site "),
+                  SizedBox(height: 10),
+                  Row(
+                    children: [
+                      Wrap(
+                        children: List.generate(
+                          5,
+                          (index) => Icon(
+                            Icons.star,
+                            color: AppColors.mainColor,
+                            size: 15,
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      SmallText(text: "4.5"),
+                      SizedBox(width: 10),
+                      SmallText(text: "1179"),
+                      SizedBox(width: 10),
+                      SmallText(text: "comints"),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.smart_toy_rounded),
+                          SmallText(text: "text"),
+                        ],
+                      ),
+                      SizedBox(width: 50),
+                      Row(
+                        children: [
+                          Icon(Icons.smart_toy_rounded),
+                          SmallText(text: "text"),
+                        ],
+                      ),
+                      SizedBox(width: 50),
+                      Row(
+                        children: [
+                          Icon(Icons.smart_toy_rounded),
+                          SmallText(text: "text"),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ],
