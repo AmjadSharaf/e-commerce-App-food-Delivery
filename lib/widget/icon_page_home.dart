@@ -21,21 +21,24 @@ class IconPageHome extends StatelessWidget {
       children: [
         Row(
           children: [
-            Icon(Icons.circle_sharp),
-            SmallText(text: text_icon1 , color: AppColors.iconColor2,),
+            Icon(Icons.circle_sharp, color: AppColors.iconColor2),
+            SizedBox(width: 10),
+            SmallText(text: text_icon1),
           ],
         ),
-        SizedBox(width: 90),
+        SizedBox(width: 70),
         Row(
           children: [
-            Icon(Icons.location_on , color:  AppColors.mainColor,),
+            Icon(Icons.location_on, color: AppColors.mainColor),
+            SizedBox(width: 10),
             SmallText(text: text_icon2),
           ],
         ),
-        SizedBox(width: 90),
+        SizedBox(width: 70),
         Row(
           children: [
-            Icon(Icons.access_time , color:AppColors.mainBlackColor),
+            Icon(Icons.access_time, color: AppColors.iconColor2),
+            SizedBox(width: 10),
             SmallText(text: text_icon3),
           ],
         ),
