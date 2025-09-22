@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/colors.dart';
 import 'package:food_app/widget/bigtext.dart';
+import 'package:food_app/widget/icon_page_home.dart';
 import 'package:food_app/widget/small_text.dart';
 
 class FoodPageBody extends StatefulWidget {
@@ -16,7 +17,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   Widget build(BuildContext context) {
     return Container(
       height: 320,
-      color: Colors.amber,
+      // color: Colors.amber,
       child: PageView.builder(
         controller: pageController,
         itemCount: 5,
@@ -35,7 +36,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           margin: EdgeInsets.only(left: 5, right: 5),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
-            color: index.isEven ? Colors.blue : Colors.amber,
+            // color: index.isEven ? Colors.blue : Colors.amber,
             image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage("assets/image/food.jpg"),
@@ -80,29 +81,10 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                     ],
                   ),
                   SizedBox(height: 10),
-                  Row(
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.smart_toy_rounded),
-                          SmallText(text: "text"),
-                        ],
-                      ),
-                      SizedBox(width: 50),
-                      Row(
-                        children: [
-                          Icon(Icons.smart_toy_rounded),
-                          SmallText(text: "text"),
-                        ],
-                      ),
-                      SizedBox(width: 50),
-                      Row(
-                        children: [
-                          Icon(Icons.smart_toy_rounded),
-                          SmallText(text: "text"),
-                        ],
-                      ),
-                    ],
+                  IconPageHome(
+                    text_icon1: "text",
+                    text_icon2: "17.5",
+                    text_icon3: "text2",
                   ),
                 ],
               ),
