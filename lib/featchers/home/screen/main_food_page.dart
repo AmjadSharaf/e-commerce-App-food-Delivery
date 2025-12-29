@@ -14,6 +14,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [Appbarhomewidget(), FoodPageBuilderWidget()],
     );
   }

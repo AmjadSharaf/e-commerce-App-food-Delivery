@@ -17,4 +17,6 @@ class Appcolor {
   static const Color cartBackgroundColor = Color(0xFFfbf8f4);
   static const Color cartIconColor = Color(0xFF9897a0);
   static const Color cartTextColor = Color(0xFF504f5e);
+  static const Color lineColor = Color(0xFFe8e8e8);
+  static const Color white = Color(0xFFFFFFFF);
 }

@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery_app/core/helper/colors/appColor.dart';
@@ -16,8 +17,8 @@ class _FoodPageBuilderWidgetState extends State<FoodPageBuilderWidget> {
   double _currentPageValue = 0.0;
 
   final double _scaleFactor = 0.8;
-  final double _containerHeight = 320.0;
-  final double _itemHeight = 220.0;
+  final double _containerHeight = 290.0;
+  final double _itemHeight = 190.0;
   final int _itemCount = 5;
 
   @override
@@ -46,9 +47,7 @@ class _FoodPageBuilderWidgetState extends State<FoodPageBuilderWidget> {
     return Transform(
       transform: matrix,
       alignment: Alignment.center,
-      child: Stack(
-        children: [_buildBackground(), const BulderPageIitemSmall()],
-      ),
+      child: Stack(children: [_buildBackground(), BulderPageIitemSmall()]),
     );
   }
 
@@ -77,13 +76,32 @@ class _FoodPageBuilderWidgetState extends State<FoodPageBuilderWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: _containerHeight.h,
-      child: PageView.builder(
-        controller: _pageController,
-        itemCount: _itemCount,
-        itemBuilder: (context, index) => _buildItem(index),
-      ),
+    return Column(
+      children: [
+        SizedBox(
+          height: _containerHeight.h,
+          child: PageView.builder(
+            controller: _pageController,
+            itemCount: _itemCount,
+            itemBuilder: (context, index) => _buildItem(index),
+          ),
+        ),
+        SizedBox(height: 5.h),
+        DotsIndicator(
+          dotsCount: _itemCount,
+          position: _currentPageValue,
+          decorator: DotsDecorator(
+            activeColor: Appcolor.mainColor,
+
+            color: Appcolor.cartIconColor,
+            size: const Size.square(9.0),
+            activeSize: const Size(18.0, 9.0),
+            activeShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
