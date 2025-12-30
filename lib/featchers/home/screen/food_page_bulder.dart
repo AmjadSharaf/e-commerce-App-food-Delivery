@@ -1,7 +1,7 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery_app/core/helper/colors/appColor.dart';
+import 'package:food_delivery_app/featchers/home/wigdget/DotsIndicator.dart';
 import 'package:food_delivery_app/featchers/home/wigdget/bulder_page_small_wedget.dart';
 import 'package:food_delivery_app/featchers/home/wigdget/page_transformer.dart';
 
@@ -87,19 +87,9 @@ class _FoodPageBuilderWidgetState extends State<FoodPageBuilderWidget> {
           ),
         ),
         SizedBox(height: 5.h),
-        DotsIndicator(
-          dotsCount: _itemCount,
-          position: _currentPageValue,
-          decorator: DotsDecorator(
-            activeColor: Appcolor.mainColor,
-
-            color: Appcolor.cartIconColor,
-            size: const Size.square(9.0),
-            activeSize: const Size(18.0, 9.0),
-            activeShape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5.0),
-            ),
-          ),
+        DotsIndicatorslide(
+          itemCount: _itemCount,
+          currentPageValue: _currentPageValue,
         ),
       ],
     );

@@ -17,28 +17,32 @@ class IconsWedget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SizedBox(width: 5.w),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Icon(Icons.circle_sharp, color: Appcolor.iconColor1),
-            SizedBox(width: 5.w),
+
             BodyText(text: text1, size: 10.sp),
           ],
         ),
-        SizedBox(width: 10.w),
+
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Icon(Icons.location_on, color: Appcolor.mainColor),
-            SizedBox(width: 5.w),
+
             BodyText(text: text2, size: 10.sp),
           ],
         ),
-        SizedBox(width: 10.w),
+
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Icon(Icons.access_time_rounded, color: Appcolor.iconColor2),
-            SizedBox(width: 5.w),
+
             BodyText(text: text3, size: 10.sp),
           ],
         ),
