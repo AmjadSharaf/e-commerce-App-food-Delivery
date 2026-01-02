@@ -19,7 +19,6 @@ class IconsWedget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SizedBox(width: 5.w),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

@@ -3,6 +3,7 @@
 // import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/core/helper/colors/appColor.dart';
+import 'package:food_delivery_app/featchers/cart/screen/cart.dart';
 import 'package:food_delivery_app/featchers/home/screen/main_food_page.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:food_delivery_app/generated/locale_keys.g.dart';
@@ -19,7 +20,7 @@ class _RootState extends State<Root> {
   final List<Widget> _screen = [
     MainFoodPage(),
     MainFoodPage(),
-    MainFoodPage(),
+    Cart(),
     MainFoodPage(),
   ];
   @override

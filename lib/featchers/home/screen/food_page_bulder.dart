@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery_app/core/helper/colors/appColor.dart';
-import 'package:food_delivery_app/featchers/home/wigdget/DotsIndicator.dart';
-import 'package:food_delivery_app/featchers/home/wigdget/bulder_page_small_wedget.dart';
-import 'package:food_delivery_app/featchers/home/wigdget/page_transformer.dart';
+import 'package:food_delivery_app/featchers/home/widget/DotsIndicator.dart';
+import 'package:food_delivery_app/featchers/home/widget/bulder_page_small_wedget.dart';
+import 'package:food_delivery_app/featchers/home/widget/page_transformer.dart';
 
 class FoodPageBuilderWidget extends StatefulWidget {
   const FoodPageBuilderWidget({super.key});

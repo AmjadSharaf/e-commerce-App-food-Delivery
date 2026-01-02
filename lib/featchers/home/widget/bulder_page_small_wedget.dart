@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_delivery_app/core/helper/colors/appColor.dart';
 import 'package:food_delivery_app/core/widgets/body_text.dart';
 import 'package:food_delivery_app/core/widgets/title_text.dart';
-import 'package:food_delivery_app/featchers/home/wigdget/icons_wedget.dart';
+import 'package:food_delivery_app/featchers/home/widget/icons_wedget.dart';
 
 class BulderPageIitemSmall extends StatelessWidget {
   const BulderPageIitemSmall({super.key});
